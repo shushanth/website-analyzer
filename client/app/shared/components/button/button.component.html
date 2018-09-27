@@ -1,0 +1,12 @@
+<div>
+  <button
+    [type]="type"
+    [tabindex]="tabindex"
+    [ngClass]="classNames"
+    (click)="buttonSubmit($event)">
+      <span>
+        <ng-content></ng-content>
+      </span>
+    <div class="focus-highlight"></div>
+  </button>
+</div>

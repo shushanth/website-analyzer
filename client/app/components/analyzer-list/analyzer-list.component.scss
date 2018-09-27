@@ -1,0 +1,54 @@
+@import "../../../styles/_settings.scss";
+
+.analyzer-grid {
+  margin-top: 1.2rem;
+
+  & .anaylyzer-heading {
+  & .title {
+      color: $wa-navy-oil-dark;
+      font-size: 0.8rem;
+      font-weight:$wa-font-weight-bold;
+    }
+  }
+  & .anaylyzer-heading-cell {
+    padding: .5rem 0;
+  }
+
+  & .cell-content {
+    color: $wa-navy-oil-dark;
+    font-size: $wa-font-size-basic;
+    font-weight: $wa-font-weight-bold;
+  }
+
+  & .cell-page-title {
+    padding-left: 1rem;
+  }
+
+  & .cell-doctype {
+    padding-left: .8rem;
+  }
+
+  & .cell-linklevels {
+    padding-left: .5rem;
+  }
+
+  & .cell-login {
+    margin-left: -1.2rem;
+  }
+
+  & .heading-link {
+    padding-left: 1.5rem;
+  }
+
+  & .cell-headinglevels {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+
+    & span {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+  }
+}
+

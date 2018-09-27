@@ -1,0 +1,65 @@
+@import "../../../../styles/_settings.scss";
+@import "../../../../styles/mixins/_flex-mixins.scss";
+@import "../../../../styles/_base.scss";
+
+.wa-input-highlight {
+  display: none;
+  background-color: $wa-cloud-blue-light;
+  margin-top: -2px;
+  width: 100%;
+  position: absolute;
+  height: .1rem;
+  bottom: -1px;
+  left: 0;
+}
+
+.wa-input-wrapper {
+  border: 1px solid $wa-gray-thick-light;
+  cursor: text;
+  height: 2.1rem;
+  line-height: 1.9rem;
+  padding: 0 .5rem;
+  position: relative;
+  width: 30rem;
+
+  & .wa-input-element {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: inherit;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    height: 1.9rem;
+    padding: 0;
+    max-width: 100%;
+    min-width: 0;
+    outline: 0;
+    width: 100%;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+
+    &:focus + .wa-input-highlight {
+      display: block;
+      outline: 0;
+    }
+
+    &:disabled {
+      -webkit-text-fill-color: $wa-gray-thick-light;
+      color: $wa-gray-thick-light;
+    }
+  }
+}
+
+.wa-input-error {
+  color: $wa-red-sunny-dark;
+  font-weight: $wa-font-weight-high;
+  padding: 0.5rem 0;
+}
+
+.wa-input-loading {
+  padding: 0.8rem 0;
+}
+
+

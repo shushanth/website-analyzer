@@ -1,0 +1,8 @@
+<section class="wa-grid-cell-header wa-flex-row">
+  <div class="wa-flex-full" *ngFor="let col of headerColumns">
+    <ng-template
+      [ngTemplateOutlet]="col.headerTemplate"
+      [ngOutletContext]="{columnValue: col}">
+    </ng-template>
+  </div>
+</section>

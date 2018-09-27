@@ -1,0 +1,28 @@
+<form class="analyzer-search">
+  <p class="title">Provide website URL to analyze a website.</p>
+  <section class="search-container">
+    <div class="wa-no-outline">
+      <wa-input
+        type="text"
+        placeholder="Search URL... , eg http://google.com"
+        focusAuto="true"
+        [tabindex]="1"
+        [value]="URLSearchValue"
+        [errorText]="invalidURLError"
+        [loading]="loading"
+        (inputValueChange)="valueChangeTrigger($event)">
+    </wa-input>
+    </div>
+    <div class="button-container">
+      <wa-button
+        type="button"
+        level="primary"
+        size="default"
+        [tabindex]="2"
+        [disabled]="isFormDisabled"
+        (buttonClick)="urlSearch($event)">
+        Search
+      </wa-button>
+    </div>
+  </section>
+</form>

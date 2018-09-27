@@ -1,0 +1,11 @@
+<div class="wa-cell-body">
+  <div class="wa-flex-row wa-valign-center wa-cell" *ngFor="let row of headerRows">
+    <div class="wa-flex-full wa-cell-content" *ngFor="let col of headerColumns">
+      <ng-template
+        *ngIf="col.cellTemplate"
+        [ngTemplateOutlet]="col.cellTemplate"
+        [ngOutletContext]="{ value: row[col.rowField], rowValue: row, columnValue: col }">
+      </ng-template>
+    </div>
+  </div>
+</div>

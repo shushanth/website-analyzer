@@ -1,0 +1,20 @@
+<div [ngClass]="classNames"
+  class="wa-flex-row wa-valign-center wa-flex-full wa-input-wrapper">
+  <input
+    [tabindex]="tabindex"
+    [value]="value"
+    [type]="type"
+    [autofocus]="focusAuto"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    (blur)="inputBlur($event)"
+    class="wa-input-element"/>
+  <div class="wa-input-highlight"></div>
+</div>
+<div *ngIf="!!errorText" class="wa-input-error">
+  {{errorText}}
+</div>
+<div *ngIf="loading" class="wa-input-loading">
+    <wa-loading-icon [align]="default"></wa-loading-icon>
+</div>
+

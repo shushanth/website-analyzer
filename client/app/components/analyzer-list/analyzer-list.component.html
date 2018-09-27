@@ -1,0 +1,118 @@
+<section class="analyzer-grid">
+  <wa-grid
+    [rows]="anaylzedData"
+    [columnsDef]="analyzerGridHeadersConfig"
+    [loading]="loading"
+    emptyResultsMessage="No results to display">
+    <!-- columns headings start -->
+    <wa-grid-column value="pageTitle">
+      <ng-template #headerTemplate let-columnValue="columnValue">
+        <div class="anaylyzer-heading">
+          <p class="title">{{columnValue.name}}</p>
+        </div>
+      </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="doctypeVersion">
+      <ng-template #headerTemplate let-columnValue="columnValue">
+        <div class="anaylyzer-heading">
+            <p class="title">{{columnValue.name}}</p>
+        </div>
+      </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="headingLevels">
+      <ng-template #headerTemplate let-columnValue="columnValue">
+        <div class="anaylyzer-heading">
+            <p class="title">{{columnValue.name}}</p>
+        </div>
+      </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="linkLevels">
+      <ng-template #headerTemplate let-columnValue="columnValue">
+        <div class="anaylyzer-heading heading-link">
+            <p class="title">{{columnValue.name}}</p>
+        </div>
+      </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="loginFormExists">
+      <ng-template #headerTemplate let-columnValue="columnValue">
+        <div class="anaylyzer-heading">
+            <p class="title">{{columnValue.name}}</p>
+        </div>
+      </ng-template>
+    </wa-grid-column>
+    <!-- columns headings end -->
+
+    <!-- columns corresponding rows start -->
+    <wa-grid-column value="pageTitle">
+        <ng-template #cellTemplate
+          let-value="value"
+          let-columnValue="columnValue"
+          let-rowValue="rowValue">
+          <div class="anaylyzer-heading-cell cell-page-title">
+            <p class="cell-content">{{value}}</p>
+          </div>
+        </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="doctypeVersion">
+        <ng-template #cellTemplate
+          let-value="value"
+          let-columnValue="columnValue"
+          let-rowValue="rowValue">
+          <div class="anaylyzer-heading-cell cell-doctype">
+            <p class="cell-content">{{value}}</p>
+          </div>
+        </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="headingLevels">
+        <ng-template #cellTemplate
+          let-value="value"
+          let-columnValue="columnValue"
+          let-rowValue="rowValue">
+          <div class="anaylyzer-heading-cell cell-headinglevels">
+            <span class="cell-content" *ngFor="let heading of value">
+              {{formatHeadings(heading)}}
+            </span>
+          </div>
+        </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="linkLevels">
+        <ng-template #cellTemplate
+          let-value="value"
+          let-columnValue="columnValue"
+          let-rowValue="rowValue">
+          <div class="anaylyzer-heading-cell cell-linklevels">
+            <p class="cell-content">
+              External: {{value.externalLinks}}
+            </p>
+            <p class="cell-content">
+              Internal: {{value.internalLinks}}
+            </p>
+            <p class="cell-content">
+              InAccessable : {{value.inAccessableLinks}}
+            </p>
+          </div>
+        </ng-template>
+    </wa-grid-column>
+
+    <wa-grid-column value="loginFormExists">
+        <ng-template #cellTemplate
+          let-value="value"
+          let-columnValue="columnValue"
+          let-rowValue="rowValue">
+          <div class="anaylyzer-heading-cell cell-login">
+            <p class="cell-content">
+              {{value}}
+            </p>
+          </div>
+        </ng-template>
+    </wa-grid-column>
+    <!-- columns corresponding rows start -->
+  </wa-grid>
+</section>

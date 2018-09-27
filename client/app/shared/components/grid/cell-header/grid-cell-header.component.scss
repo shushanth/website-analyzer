@@ -1,0 +1,10 @@
+@import "../../../../../styles/_settings.scss";
+
+:host {
+  width: 100%;
+}
+
+.wa-grid-cell-header {
+  padding: .5rem 1.5rem;
+  background: $wa-gray-color-thick;
+}

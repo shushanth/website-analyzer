@@ -1,0 +1,21 @@
+<section class="wa-grid">
+  <section  class="wa-grid-header wa-flex-row wa-valign-center">
+    <wa-grid-cell-header
+      [columns]="waColumns">
+    </wa-grid-cell-header>
+  </section>
+  <section
+    *ngIf="isEmptyResults()"
+    class="wa-grid-empty wa-flex-row wa-align-center">
+    <p class="empty-results-text">{{emptyResultsMessage}}</p>
+  </section>
+  <section class="wa-grid-body">
+    <wa-grid-cell-body
+      [columns]="waColumns"
+      [rows]="waRows">
+    </wa-grid-cell-body>
+  </section>
+  <section class="analyzer-loading" *ngIf="loading">
+    <wa-loading-icon align="center"></wa-loading-icon>
+  </section>
+</section>

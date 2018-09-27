@@ -1,0 +1,54 @@
+@import "../../../../styles/_settings.scss";
+@import "../../../../styles/mixins/_flex-mixins.scss";
+@import "../../../../styles/_base.scss";
+
+.wa-button-element {
+  background-color: $wa-gray-color-thick;
+  font-size: $wa-font-size-default;
+  font-weight: $wa-font-weight-basic;
+  text-align: center;
+  padding: 0 .5rem;
+  line-height: 2rem;
+  min-height: 2rem;
+  min-width: 100%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    .focus-highlight {
+      display: block;
+    }
+  }
+}
+.size-default {
+  font-size: .8rem;
+  line-height: 2rem;
+  min-width: 8rem;
+}
+.level-primary {
+  background-color: $wa-cloud-blue-light;
+  color: $wa-color-white-diamond;
+}
+
+.focus-highlight {
+  display: none;
+  background-color: $wa-pink-stone-dark;
+  margin-top: -2px;
+  width: 100%;
+  position: absolute;
+  height: .08rem;
+  bottom: -1px;
+  left: 0;
+}
+
+.wa-button-disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: $wa-cloud-blue-disabled;
+  color: $wa-color-white-diamond;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}

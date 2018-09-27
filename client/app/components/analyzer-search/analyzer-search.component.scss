@@ -1,0 +1,24 @@
+@import "../../../styles/_settings.scss";
+@import "../../../styles/mixins/_flex-mixins.scss";
+
+.analyzer-search {
+  padding: 2rem 1.5rem;
+  max-height: 8rem;
+
+  & .title {
+    color: $wa-navy-oil-dark;
+    font-size: $wa-font-size-medium;
+    font-weight: $wa-font-weight-high;
+    letter-spacing: .03rem;
+  }
+
+  & .search-container {
+    @include wa-flex(row);
+    padding-top: 1rem;
+  }
+
+  & .button-container {
+    padding-left: 2rem;
+  }
+
+}

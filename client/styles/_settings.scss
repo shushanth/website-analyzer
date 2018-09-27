@@ -1,0 +1,44 @@
+/*************************
+
+    name:_setting.scss
+    This file includes the common variables entities
+    contents
+    1.colors.
+    2.fonts.
+
+ *************/
+
+
+//1. colors
+$wa-color-white-snow: rgba(255, 255, 255, 0.9);
+$wa-color-white-diamond: #f4f6f6;
+$wa-navy-oil-dark: #222e3a;
+$wa-gray-thick-light: #aab7b8;
+$wa-gray-thick-dark: #cbd0d0;
+$wa-cloud-blue-light: #32bae8;
+$wa-cloud-blue-shadow: #70bdd6;
+$wa-cloud-blue-disabled: lighten($wa-cloud-blue-light, 20%);
+$wa-pink-stone-dark: #ff006a;
+$wa-gray-color-thick: #d4d4d4;
+$wa-color-shadow-light: rgba(#545454, 0.3);
+$wa-red-sunny-dark: #ea1b1b;
+
+//2. fonts
+$wa-font-family-default: 'Open Sans', sans-serif;
+$wa-font-family-montserrat: 'Montserrat', sans-serif;
+
+$wa-font-size-default: 20px;
+$wa-font-size-extra-small: 12px;
+$wa-font-size-small: 13px;
+$wa-font-size-basic: 15px;
+$wa-font-size-medium: 18px;
+$wa-font-size-large: 21px;
+$wa-font-size-extra-large: 24px;
+
+$wa-font-weight-lighter: 200;
+$wa-font-weight-light: 300;
+$wa-font-weight-basic: 400;
+$wa-font-weight-high: 600;
+$wa-font-weight-medium: 500;
+$wa-font-weight-bold: 700;
+

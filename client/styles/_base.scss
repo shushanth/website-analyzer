@@ -1,0 +1,69 @@
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: $wa-font-size-default !important;
+  font-family: $wa-font-family-default;
+}
+
+body {
+  font-family:$wa-font-family-montserrat;
+  font-size: $wa-font-size-basic !important;
+  background-color:#fff;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li,
+ol {
+  list-style: none !important;
+}
+
+//utils classes
+.wa-flex-row {
+  @include wa-flex(row);
+
+  & .wa-valign-center {
+    @include wa-flex-align('', center);
+  }
+
+  & .wa-halign-center {
+    @include wa-flex-align(center);
+  }
+
+  & .wa-align-center {
+    @include wa-flex-align(center, center);
+  }
+}
+
+.wa-flex-full {
+  flex: 1;
+}
+
+.wa-no-outline {
+  outline: 0;
+}
+

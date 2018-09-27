@@ -1,0 +1,10 @@
+@import "../../../styles/_settings.scss";
+@import "../../../styles/mixins/_flex-mixins.scss";
+
+.analyzer-heading {
+  background-color: $wa-navy-oil-dark;
+  color: $wa-color-white-diamond;
+  padding: 1.5rem;
+  font-size: $wa-font-size-medium;
+  letter-spacing: .05rem;
+}

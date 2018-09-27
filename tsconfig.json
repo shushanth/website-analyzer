@@ -1,0 +1,37 @@
+/**
+ * @author shushanth
+ * @description tsconfig , typescript configuration
+ */
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@angular/*": ["./node_modules/@angular/*"],
+      "components": ["./client/app/components/*"],
+      "services": ["./client/app/services/*"],
+      "shared": ["./client/app/shared/*"]
+    },
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "types": [ "node" , "jasmine"],
+    "typeRoots": [ "../node_modules/@types" ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false
+}

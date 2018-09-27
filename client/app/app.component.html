@@ -1,0 +1,13 @@
+<article class="wa-flex-row">
+  <section class="wa-flex-full">
+    <web-analyzer-header title="Website analyzer"></web-analyzer-header>
+    <web-analyzer-search
+      [loading]="loadingResults"
+      (analyzeURL)="makeURLAnalyze($event)">
+    </web-analyzer-search>
+    <web-analyzer-list
+      [anaylzedData]="webAnalyzedData"
+      [loading]="loadingResults">
+    </web-analyzer-list>
+  </section>
+</article>
